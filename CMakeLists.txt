@@ -42,6 +42,12 @@ SET(LIBRARIES
 )
 
 SET(SOURCES
+	include/dualquaternion/dual_quat_cu.hpp
+	include/dualquaternion/mat3.hpp
+	include/dualquaternion/point3.hpp
+	include/dualquaternion/quat_cu.hpp
+	include/dualquaternion/transfo.hpp
+	include/dualquaternion/vec3.hpp
 	src/*.cpp
 )
 
