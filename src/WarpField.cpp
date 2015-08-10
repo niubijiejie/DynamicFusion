@@ -18,6 +18,9 @@ namespace dynamicfusion {
 	bool WarpField::process() {
 	}
 
+	void WarpField::WarpFunction() {
+	}
+
 	/*
 	 * Transforms point from canonical space into the live, non-rigidly deformed frame of reference.
 	 *
@@ -35,7 +38,7 @@ namespace dynamicfusion {
 	 * @param weights : list of influence weights for each vertex
 	 * @param joints_id : list of joints influence fore each vertex (same order as 'weights')
 	 */
-	void WarpField::WarpFunction(
+	void WarpField::DualQuartornionBlending(
 			const std::vector<Point3> &in_verts,
 			const std::vector<Vec3> &in_normals,
 			std::vector<Vec3> &out_verts,
@@ -84,9 +87,6 @@ namespace dynamicfusion {
 			// Compute animated normal
 			out_normals[v] = dq_blend.rotate(in_normals[v]);
 		}
-	}
-
-	void WarpField::DualQuartornionBlending() {
 	}
 
 	void WarpField::QuaternionToTransformation() {
