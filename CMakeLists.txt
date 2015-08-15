@@ -48,7 +48,15 @@ SET(SOURCES
 	include/dualquaternion/quat_cu.hpp
 	include/dualquaternion/transfo.hpp
 	include/dualquaternion/vec3.hpp
-	src/*.cpp
+	src/CanonicalModel.cpp
+	src/DeformationGraph.cpp
+	src/DeformationNode.cpp
+	src/DynamicFusion.cpp
+	src/RegularisationGraph.cpp
+	src/RegularisationNode.cpp
+	src/TSDF.cpp
+	src/WarpField.cpp
+	src/WarpFieldEstimator.cpp
 )
 
 LINK_DIRECTORIES(

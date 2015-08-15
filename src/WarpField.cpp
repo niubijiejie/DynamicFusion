@@ -18,7 +18,7 @@ namespace dynamicfusion {
 	bool WarpField::process() {
 	}
 
-	void WarpField::WarpFunction() {
+	void WarpField::warpFunction() {
 	}
 
 	/*
@@ -89,6 +89,6 @@ namespace dynamicfusion {
 		}
 	}
 
-	void WarpField::QuaternionToTransformation() {
+	void WarpField::quaternionToTransformation() {
 	}
 }

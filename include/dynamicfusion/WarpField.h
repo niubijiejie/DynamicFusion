@@ -8,9 +8,9 @@ namespace dynamicfusion {
 			~WarpField();
 			void init();
 			bool process();
-			void WarpFunction();
-			void DualQuartornionBlending();
-			void QuaternionToTransformation();
+			void warpFunction();
+			void dualQuartornionBlending();
+			void quaternionToTransformation();
 
 		private:
 	};
