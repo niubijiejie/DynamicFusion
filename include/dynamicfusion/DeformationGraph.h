@@ -1,20 +1,17 @@
-#ifndef DEFORMATIONNODE_H
-#define DEFORMATIONNODE_H
+#ifndef DEFORMATIONGRAPH_H
+#define DEFORMATIONGRAPH_H
 
 #include "dualquaternion/vec3.hpp"
 #include "dualquaternion/mat3.hpp"
 
 namespace dynamicfusion {
 	using namespace Tbx;
-	class DeformationNode {
+	class DeformationGraph {
 		public:
-			DeformationNode();
-			~DeformationNode();
+			DeformationGraph();
+			~DeformationGraph();
 
 		private:
-			Point3 mdg_v;
-			float mdg_w;
-			Mat3 mdg_se3;
 	};
 }
 

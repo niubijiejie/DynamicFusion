@@ -1,7 +1,4 @@
-#include "dynamicfusion/core/WarpField.h"
-#include "dualquaternion/dual_quat_cu.hpp"
-
-#include <vector>
+#include "dynamicfusion/WarpField.h"
 
 namespace dynamicfusion {
 	using namespace Tbx;
@@ -38,14 +35,14 @@ namespace dynamicfusion {
 	 * @param weights : list of influence weights for each vertex
 	 * @param joints_id : list of joints influence fore each vertex (same order as 'weights')
 	 */
-	void WarpField::DualQuartornionBlending(
+	void WarpField::dualQuartornionBlending(
 			const std::vector<Point3> &in_verts,
 			const std::vector<Vec3> &in_normals,
 			std::vector<Vec3> &out_verts,
 			std::vector<Vec3> &out_normals,
 			const std::vector<Dual_quat_cu> &dual_quat,
 			const std::vector<std::vector<float>> &weights,
-			const std::vector<std::vector<int> &joints_id) {
+			const std::vector<std::vector<int>> &joints_id) {
 		for (unsigned v = 0; v < in_verts.size(); ++v) {
 			const int nb_joints = weights[v].size(); // Number of joints influencing vertex p
 

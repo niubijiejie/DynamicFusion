@@ -28,8 +28,11 @@ namespace dynamicfusion {
 			void energyReg(
 					const WarpField W_t,
 					const RegularisationGraph epsilon);
-			void tukeyPenaltyFunction();
-			void huberPenalyFunction();
+			double tukeyPenaltyFunction(
+					double threshold,
+					double x,
+					double c);
+			void huberPenaltyFunction();
 	};
 }
 

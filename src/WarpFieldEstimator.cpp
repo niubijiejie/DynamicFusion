@@ -30,13 +30,16 @@ namespace dynamicfusion {
 			const RegularisationGraph epsilon) {
 	}
 
-	void WarpFieldEstimator::tukeyPenaltyFunction() {
+	double WarpFieldEstimator::tukeyPenaltyFunction(
+			double threshold,
+			double x,
+			double c) {
 		double x_abs;
 
 		if (x_abs > threshold) {
 			return x * (1 - (x * x) / (c * c)) * (1 - (x * x) / (c * c));
 		} else
-			return 0;
+			return 0.0;
 	}
 
 	void WarpFieldEstimator::huberPenaltyFunction() {
